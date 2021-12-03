@@ -1,0 +1,38 @@
+@media (max-width: 900px) {
+    .data{
+        .nav-tabs{
+            justify-content: flex-start !important;
+            flex-wrap: nowrap;
+            overflow-y: hidden;
+            overflow-x: scroll;
+
+            .nav-item{
+                margin: 0px 0px 30px 20px !important; 
+            }
+        }
+
+        .heading{
+            text-align: unset !important;
+        }
+
+        .full-data{
+            font-size: 12px !important;
+        }
+
+        .dark-color{
+            font-size: 11px !important;
+        }
+
+        .contact-list{
+            .full-data{
+                width: 50% !important;
+            }
+        }
+
+        .flex-content {
+            .full-raduis{
+                width: 70% !important;
+            }
+        }
+    }
+}
