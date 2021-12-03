@@ -139,41 +139,32 @@ ul {
 
 .navbar .top-nav {
   width: 100%;
-  padding: 100px 0px 40px 0px;
-  background-color: var(--primary);
   border-bottom: 5px solid var(--whiteColor);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
 }
 
-.navbar .top-nav .image-content {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: var(--whiteColor);
-  border: 3px solid var(--whiteColor);
-  overflow: hidden;
+.navbar .top-nav .owl-header {
+  width: 100%;
+}
+
+.navbar .top-nav .owl-header .item {
+  width: 100%;
+  padding: 140px 0px 40px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
-  z-index: 9;
-  margin-bottom: -140px;
+  z-index: 99;
 }
 
-.navbar .top-nav .image-content img {
+.navbar .top-nav .owl-header .item::After {
+  content: '';
+  position: absolute;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .navbar .bottom-nav {
@@ -181,6 +172,29 @@ ul {
   padding: 150px 0px 50px 0px;
   background-color: var(--secondary);
   border-bottom: 5px solid var(--whiteColor);
+  position: relative;
+}
+
+.navbar .bottom-nav .image-content {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--whiteColor);
+  border: 3px solid var(--whiteColor);
+  overflow: hidden;
+  position: absolute;
+  z-index: 999;
+  top: -100px;
+  left: calc(50% - 100px);
+}
+
+.navbar .bottom-nav .image-content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .navbar .bottom-nav .content {
